@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "619331024655",
+    "project_id": "bettersololearn",
+    "storage_bucket": "bettersololearn.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:619331024655:android:f95cc8b3c2cb6fe1d9b07a",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.BetterSoloLearn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "619331024655-h43dp2ddrod8jo46eojb4vu59ni66gva.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmUH9rIEWBFkeq299OERw1LFe3jF0V_3s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "619331024655-h43dp2ddrod8jo46eojb4vu59ni66gva.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "619331024655-6aka3n7aajthc2iash02m0bri5186agm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.DefaultCompany.BetterSoloLearn"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
