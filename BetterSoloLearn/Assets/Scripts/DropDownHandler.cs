@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class DropDownHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static DropDownHandler instance;
+
+    private void Awake()
     {
-        
+        instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    void HandleInputData(int val)
     {
-        
+        switch (val)
+        {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            default:
+                break;
+        }
     }
 }
