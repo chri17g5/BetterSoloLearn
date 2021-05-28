@@ -4,20 +4,30 @@ using UnityEngine;
 
 public class LoginInteraction : MonoBehaviour
 {
-    public static LoginInteraction instance;
+    //These are the diffrent us displays
     [SerializeField] GameObject LoginPanel;
     [SerializeField] GameObject SigninPanel;
     [SerializeField] GameObject MainPanel;
 
-    private void OnEnable()
-    {
-        instance = this;
-    }
+    //These are the inputfield within the LoginUI
+    [SerializeField] GameObject UsernameInput;
+    [SerializeField] GameObject PasswordInput;
+
+    //Error message
+    [SerializeField] GameObject ErrorMessageDisplay;
 
     public void LogInCheck()
     {
         //Insert Code that checks with fireabase if the user exists
         //Teacher insists on using Regex keep that in mind
+    }
+
+    /// <summary>
+    /// Displays error message
+    /// </summary>
+    private void DisplayErrorMessage()
+    {
+        ErrorMessageDisplay.SetActive(true);
     }
 
     /// <summary>
