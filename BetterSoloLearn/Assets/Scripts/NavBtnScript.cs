@@ -6,57 +6,77 @@ using UnityEngine.UIElements;
 
 public class NavBtnScript : MonoBehaviour
 {
+    public static NavBtnScript instance;
+    GameObject AD;
+    GameObject MD;
+    GameObject LIUI;
+    GameObject SIUI;
+    GameObject NTLB;
+    GameObject NTSB;
+    private void Awake()
+    {
+        LIUI = GameObject.FindWithTag("LogInUI");
+        SIUI = GameObject.FindWithTag("SignInUI");
+        AD = GameObject.FindWithTag("AuthDisplay");
+        MD = GameObject.FindWithTag("MainDisplay");
+    }
+    private void Start()
+    {
+        AD.SetActive(false);
+    }
+
     public void Navigate()
     {
-        Debug.Log(this.tag);
+        instance = this;
+        Debug.Log($"This tag is {this.tag}" + $" And instance tag is {instance.tag}");
         Debug.Log("Running navigate script");
-        if (this.tag == "NavToLoginBtn")
+        if (instance.tag == "NavToLoginBtn")
         {
             Debug.Log("Button pressed is Login button");
-            if (GameObject.FindWithTag("AuthDisplay"))
-            {
-                GameObject.FindWithTag("AuthDisplay").SetActive(true);
-                Debug.Log("Found AuthDisplay");
-            }
-            if (GameObject.FindWithTag("LogInUI"))
-            {
-                GameObject.FindWithTag("LogInUI").SetActive(true);
-                Debug.Log("Found LogInUI");
-            }
-            if (GameObject.FindWithTag("SignInUI"))
-            {
-                GameObject.FindWithTag("SignInUI").SetActive(false);
-                Debug.Log("Found SignInUI");
-            }
-            if (GameObject.FindWithTag("MainDisplay"))
-            {
-                GameObject.FindWithTag("MainDisplay").SetActive(false);
-                Debug.Log("Found MainDisplay");
-            }
+
+                AD.SetActive(true);
+                Debug.Log("Activating AuthDisplay");
+            
+                SIUI.SetActive(false);
+                Debug.Log("Deactivating SignInUI");
+
+                LIUI.SetActive(true);
+                Debug.Log("Activating LogInUI");
+            
+
+                MD.SetActive(false);
+                Debug.Log("Deactivating MainDisplay");
+            
         }
         else
         {
             Debug.Log("did not run Login button code");
         }
-        if (this.tag == "NavToSigninBtn")
+        if (instance.tag == "NavToSigninBtn")
         {
-            Debug.Log("Button pressed is Signin button");
-            if (gameObject.tag == "AuthDisplay")
+            if (instance.tag == "NavToLoginBtn")
             {
-                gameObject.SetActive(true);
+                Debug.Log("Wr0ng wr0ng wr0ng!");
+                return;
             }
-            if (gameObject.tag == "SignInUI")
-            {
-                gameObject.SetActive(true);
-            }
-            if (gameObject.tag == "LogInUI")
-            {
-                gameObject.SetActive(false);
-            }
-            if (gameObject.tag == "MainDisplay")
-            {
-                gameObject.SetActive(false);
-            }
+            Debug.Log("Button pressed is SignIn button");
+            Debug.Log($"This tag is {this.tag}" + $" And instance tag is {instance.tag}");
+
+            AD.SetActive(true);
+             Debug.Log("Activating AuthDisplay");
+
+
+             LIUI.SetActive(false);
+             Debug.Log("Deactivating LogInUI");
+
+
+             SIUI.SetActive(true);
+             Debug.Log("Activating SignInUI");
+
+
+             MD.SetActive(false);
+             Debug.Log("Deactivating MainDisplay");
+
         }
         else
         {
