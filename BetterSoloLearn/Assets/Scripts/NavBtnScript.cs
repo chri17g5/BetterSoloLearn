@@ -18,8 +18,8 @@ public class NavBtnScript : MonoBehaviour
             Destroy(this);
         }
     }
-    void EnablePanel()
-    {
-        
+    private void Navigate()
+    { 
+    
     }
 }
