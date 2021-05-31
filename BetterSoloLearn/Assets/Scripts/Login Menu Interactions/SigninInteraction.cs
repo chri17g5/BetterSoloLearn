@@ -7,6 +7,7 @@ public class SigninInteraction : MonoBehaviour
     //This is the diffrent views accsessable from this UI
     [SerializeField] GameObject SigninUI;
     [SerializeField] GameObject LoginUI;
+    [SerializeField] GameObject MainUI;
 
     //This is the btns
     [SerializeField] GameObject ConfirmBtn;
